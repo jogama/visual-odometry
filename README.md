@@ -1,13 +1,19 @@
-# Visual Odometry (initially called "frustration-child")
+# Monocular Visual Odometry (initially called "frustration-child")
 
 Born out of stress and frustration from studying for software interviews.  
 Using Friedrich Fraundorfer and Davide Scaramuzza's Visual Odometry tutorial (IEEE)  
 
-not yet sure if I'm doing this monocular or stereo. I'd need to buy webcams for the latter, but a pair of logitecs come as low as ~20...
+## What can this thing do? (Milestones*)  
+1. unitless odometry of my laptop moving in free space using ts webcam
+2. unitless odometry of my [duckiebot](duckietown.mit.edu) moving around
+3. odometry in meters of duckiebot using an in-frame reference of known dimensions
+4. this is a lofty goal, but perhaps package this as a [MOOS-IvP](moos-ivp.org) app after asking if people want it.
+
+*this project is too small to justify using github milestones.  
 
 ## Components/Steps 
 1. Extract features with feature detector  
-2. Match features between current image frame and previous one  
+2. Track features between current image frame and previous one  
 3. Remove outliers using RANSAC  
 4. Guess the camera transformation  
 
